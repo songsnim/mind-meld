@@ -76,22 +76,6 @@ mkdir -p ~/.config/opencode/skills
 ln -sfn ~/.mind-meld/skills/* ~/.config/opencode/skills/
 ```
 
-**Cursor**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.cursor/skills
-ln -sfn ~/.mind-meld/skills/* ~/.cursor/skills/
-```
-
-**Hermes**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.hermes/skills
-ln -sfn ~/.mind-meld/skills/* ~/.hermes/skills/
-```
-
 갱신은 `git -C ~/.mind-meld pull` — symlink 가 따라옵니다. Claude Code 는 marketplace 로 갱신합니다.
 
 ## 구성
@@ -117,4 +101,4 @@ ln -sfn ~/.mind-meld/skills/* ~/.hermes/skills/
 - 세션은 사용자의 언어로 진행됩니다. 제2언어로 쓴 에세이를 채점하면 이해도가 아니라 작문을 재게 됩니다.
 - 스크립트·의존성·빌드 없음. `SKILL.md` 여덟 개뿐입니다.
 
-MIT.
+[MIT](../../LICENSE).

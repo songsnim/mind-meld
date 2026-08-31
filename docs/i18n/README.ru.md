@@ -79,22 +79,6 @@ mkdir -p ~/.config/opencode/skills
 ln -sfn ~/.mind-meld/skills/* ~/.config/opencode/skills/
 ```
 
-**Cursor**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.cursor/skills
-ln -sfn ~/.mind-meld/skills/* ~/.cursor/skills/
-```
-
-**Hermes**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.hermes/skills
-ln -sfn ~/.mind-meld/skills/* ~/.hermes/skills/
-```
-
 Обновление — `git -C ~/.mind-meld pull`, симлинки подхватят. Claude Code обновляется через
 marketplace.
 
@@ -121,4 +105,4 @@ marketplace.
 - Сессия говорит на вашем языке. Оценка эссе на неродном языке измеряет письмо, а не понимание.
 - Ни скриптов, ни зависимостей, ни сборки. Восемь файлов `SKILL.md`.
 
-MIT.
+[MIT](../../LICENSE).

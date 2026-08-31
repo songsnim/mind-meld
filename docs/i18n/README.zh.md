@@ -71,22 +71,6 @@ mkdir -p ~/.config/opencode/skills
 ln -sfn ~/.mind-meld/skills/* ~/.config/opencode/skills/
 ```
 
-**Cursor**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.cursor/skills
-ln -sfn ~/.mind-meld/skills/* ~/.cursor/skills/
-```
-
-**Hermes**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.hermes/skills
-ln -sfn ~/.mind-meld/skills/* ~/.hermes/skills/
-```
-
 更新用 `git -C ~/.mind-meld pull`，符号链接会自动跟上。Claude Code 通过 marketplace 更新。
 
 ## 内容
@@ -111,4 +95,4 @@ ln -sfn ~/.mind-meld/skills/* ~/.hermes/skills/
 - 会话使用你的语言。用第二语言写的小论文，评的是写作而不是理解。
 - 没有脚本、没有依赖、无需构建。只有八个 `SKILL.md`。
 
-MIT.
+[MIT](../../LICENSE).

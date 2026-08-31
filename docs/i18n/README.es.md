@@ -81,22 +81,6 @@ mkdir -p ~/.config/opencode/skills
 ln -sfn ~/.mind-meld/skills/* ~/.config/opencode/skills/
 ```
 
-**Cursor**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.cursor/skills
-ln -sfn ~/.mind-meld/skills/* ~/.cursor/skills/
-```
-
-**Hermes**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.hermes/skills
-ln -sfn ~/.mind-meld/skills/* ~/.hermes/skills/
-```
-
 Actualiza con `git -C ~/.mind-meld pull`; los enlaces simbólicos siguen. Claude Code se actualiza por
 el marketplace.
 
@@ -123,4 +107,4 @@ una explicación nunca acaba en un diálogo socrático por sorpresa.
 - La sesión habla tu idioma. Calificar un ensayo en un segundo idioma mide redacción, no comprensión.
 - Sin scripts, sin dependencias, sin build. Ocho archivos `SKILL.md`.
 
-MIT.
+[MIT](../../LICENSE).

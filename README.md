@@ -5,20 +5,11 @@
 <h1 align="center">mind-meld</h1>
 
 <p align="center">
-  <em>The agent already understands it. Now you do.</em>
+  <strong><em>The agent's mind to your mind. Understand the PR before you approve it.</em></strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/songsnim/mind-meld?style=flat-square&color=111111&label=stars" alt="Stars">
-  <img src="https://img.shields.io/badge/skills-8-111111?style=flat-square" alt="8 skills">
-  <img src="https://img.shields.io/badge/works%20with-5%20agents-111111?style=flat-square" alt="Works with 5 agents">
-  <img src="https://img.shields.io/badge/dependencies-0-111111?style=flat-square" alt="Zero dependencies">
-  <img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license">
-</p>
-
-<p align="center">
-  <strong>Understand the PR before you approve it &middot; measured, not assumed</strong><br>
-  <sub>Eight skills that build an interactive world out of the change, quiz you on it, drill the part you missed, and grade your own explanation until it holds at 8/10 on <em>what changed</em>, <em>why this way</em>, and <em>what can break</em>. Markdown only — no scripts, no dependencies, no build.</sub>
+  <sub>A tool suite for understanding the unfamiliar concepts, knowledge, and design decisions an agent pulls in while it writes code, before you trust them. Its most frequent venue is the pull request an agent just opened, but the target can be any module, algorithm, library, architectural decision, or bare concept.</sub>
 </p>
 
 <p align="center">
@@ -27,14 +18,7 @@
 
 ---
 
-A tool suite for understanding the unfamiliar concepts, knowledge, and design decisions an agent
-pulls in while it writes code — before you trust them. Its most frequent venue is the pull request an
-agent just opened, but the target can be any module, algorithm, library, architectural decision, or
-bare concept.
-
-Agents ship faster than humans can read. The review bottleneck is not typing an approval, it is
-understanding what you are approving. mind-meld is the [Vulcan mind
-meld](https://en.wikipedia.org/wiki/Vulcan_(Star_Trek)#Mind_meld): a way into the agent's head.
+Agents ship faster than humans can read. The review bottleneck is not typing an approval, it is understanding what you are approving. mind-meld is the [Vulcan mind meld](https://en.wikipedia.org/wiki/Vulcan_(Star_Trek)#Mind_meld): a way into the agent's head.
 
 ## How a session runs
 
@@ -91,22 +75,6 @@ mkdir -p ~/.config/opencode/skills
 ln -sfn ~/.mind-meld/skills/* ~/.config/opencode/skills/
 ```
 
-**Cursor**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.cursor/skills
-ln -sfn ~/.mind-meld/skills/* ~/.cursor/skills/
-```
-
-**Hermes**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.hermes/skills
-ln -sfn ~/.mind-meld/skills/* ~/.hermes/skills/
-```
-
 Update with `git -C ~/.mind-meld pull` — the symlinks follow. Claude Code updates through the
 marketplace.
 
@@ -134,4 +102,4 @@ explanation never gets ambushed by a Socratic dialogue.
   understanding.
 - No scripts, no dependencies, no build. Eight `SKILL.md` files.
 
-MIT.
+[MIT](LICENSE).

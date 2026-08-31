@@ -75,22 +75,6 @@ mkdir -p ~/.config/opencode/skills
 ln -sfn ~/.mind-meld/skills/* ~/.config/opencode/skills/
 ```
 
-**Cursor**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.cursor/skills
-ln -sfn ~/.mind-meld/skills/* ~/.cursor/skills/
-```
-
-**Hermes**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.hermes/skills
-ln -sfn ~/.mind-meld/skills/* ~/.hermes/skills/
-```
-
 更新は `git -C ~/.mind-meld pull` — symlink が追随します。Claude Code は marketplace 経由で更新します。
 
 ## 中身
@@ -116,4 +100,4 @@ ln -sfn ~/.mind-meld/skills/* ~/.hermes/skills/
 - セッションは利用者の言語で進みます。第二言語で書いた小論文の採点は、理解度ではなく作文力の測定です。
 - スクリプト・依存・ビルドなし。`SKILL.md` 8枚だけです。
 
-MIT.
+[MIT](../../LICENSE).

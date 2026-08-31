@@ -68,11 +68,12 @@ skills reference it (`../mind-meld/SKILL.md`) instead of restating those rules.
 - No scripts, no dependencies, no build, no CI. Frontmatter typos surface the moment a host fails to
   load a skill. Verify ad hoc (name matches directory, description length, `disable-model-invocation`
   present on the seven tools) with a throwaway script — do not commit one.
-- Install parity across five hosts is a hard constraint: Claude Code (`/plugin marketplace add
-  songsnim/mind-meld`), Codex `~/.codex/skills/`, opencode `~/.config/opencode/skills/`, Cursor
-  `~/.cursor/skills/`, Hermes `~/.hermes/skills/`. All five read the same Agent Skills standard, so
-  one copy of each SKILL.md serves all of them — anything that breaks that (a runtime, a package
-  manager) is off the table.
+- Supported hosts are Claude Code (`/plugin marketplace add songsnim/mind-meld`), Codex
+  (`~/.codex/skills/`), and opencode (`~/.config/opencode/skills/`) — the three whose skill
+  discovery paths are verified. Install parity across them is a hard constraint: all three read the
+  same Agent Skills standard, so one copy of each SKILL.md serves all of them, and anything that
+  breaks that (a runtime, a package manager) is off the table. Other hosts reading the same standard
+  work by copying a block, but are not claimed until their path is confirmed.
 - Skill `description` fields carry both PR-shaped and concept-shaped triggers. PR-only wording would
   hide the suite from half its uses.
 
