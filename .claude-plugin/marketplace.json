@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "mind-meld",
+  "owner": {
+    "name": "youngjaesong",
+    "url": "https://github.com/songsnim"
+  },
+  "plugins": [
+    {
+      "name": "mind-meld",
+      "source": "./",
+      "description": "Understand what an agent actually did — and the unfamiliar ideas it used — before you approve it."
+    }
+  ]
+}
