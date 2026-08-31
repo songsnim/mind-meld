@@ -20,10 +20,31 @@
 
 Agents ship faster than humans can read. The review bottleneck is not typing an approval, it is understanding what you are approving. mind-meld is the [Vulcan mind meld](https://en.wikipedia.org/wiki/Vulcan_(Star_Trek)#Mind_meld): a way into the agent's head.
 
-## How a session runs
+## Two ways to use it
+
+**Track 1 — a PR to review.** Call the orchestrator; it runs the whole workflow.
 
 ```
-/mind-meld 42
+/mind-meld #42
+```
+
+**Track 2 — anything else you do not understand.** Call a tool directly with whatever it is: a
+concept, a module, an algorithm, a paper, a sentence you read.
+
+```
+/microworld "consistent hashing"
+/socratic src/scheduler.ts
+/five-whys "why does this repo pin every version"
+/first-principles "vector clocks"
+```
+
+Track 1 is a measured pipeline with a pass mark. Track 2 is one tool, on demand, for as long as you
+want it. Only the orchestrator picks tools for you; in track 2 you pick.
+
+## Track 1: reviewing a PR
+
+```
+/mind-meld #42
 ```
 
 1. **Microworld** — an interactive HTML world that embodies the mechanism, not a summary of it. You
@@ -40,13 +61,24 @@ Agents ship faster than humans can read. The review bottleneck is not typing an 
 Out comes `.mind-meld/<target>-report.md`: the scores, what stayed unclear, and the questions to send
 back to the agent. Nothing is posted for you. You approve, mind-meld does not.
 
-Any tool can also be called on its own:
+A branch, a commit range, a path, or no argument at all (the working diff) works the same way as a PR
+number.
 
-```
-/microworld src/scheduler.ts
-/five-whys 42
-/first-principles "vector clocks"
-```
+## Track 2: any tool, on anything
+
+Nothing is graded and nothing is required. Pick by what you are stuck on:
+
+| Stuck on | Call |
+| --- | --- |
+| I cannot picture how it behaves | `/microworld <thing>` |
+| I want to know what I missed | `/quiz <thing>` |
+| I cannot say what would break | `/socratic <thing>` |
+| I think I get it but cannot say it simply | `/feynman <thing>` |
+| I do not see why it was done this way | `/five-whys <thing>` |
+| The vocabulary itself is new | `/first-principles <thing>` |
+| I want my understanding scored | `/short-essay <thing>` |
+
+The argument is free text. `/microworld "CRDT merge"` and `/microworld src/merge.ts` are both valid.
 
 ## Install
 
@@ -80,19 +112,10 @@ marketplace.
 
 ## What is in it
 
-| Skill | What it does |
-| --- | --- |
-| `mind-meld` | The orchestrator. Routes between the rest. |
-| `microworld` | Interactive HTML world embodying the mechanism. |
-| `quiz` | Few determinate questions; locates the gap. |
-| `socratic` | One question at a time, until you see what breaks. |
-| `feynman` | Explain it plainly; the vague spots get marked. |
-| `five-whys` | Down to the constraint that forced the decision. |
-| `first-principles` | Rebuild an unfamiliar idea from its primitives. |
-| `short-essay` | The measuring instrument. Graded, revised until it holds. |
-
-Only `mind-meld` auto-triggers; the seven tools are invoked explicitly, so a request for an
-explanation never gets ambushed by a Socratic dialogue.
+Eight skills: `mind-meld` plus the seven tools it routes between — `microworld`, `quiz`, `socratic`,
+`feynman`, `five-whys`, `first-principles`, `short-essay`. Only `mind-meld` auto-triggers; the seven
+are explicit-invocation only, so asking for an explanation never gets ambushed by a Socratic
+dialogue.
 
 ## Notes
 
