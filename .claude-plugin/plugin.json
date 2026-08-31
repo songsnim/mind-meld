@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "mind-meld",
+  "version": "0.1.0",
+  "description": "A tool suite for actually understanding the unfamiliar concepts, knowledge, and design decisions an agent pulls in during agentic coding. Its most frequent venue is reviewing a PR an agent opened, but any module, algorithm, library, or architectural decision is a valid target.",
+  "author": {
+    "name": "youngjaesong",
+    "url": "https://github.com/songsnim"
+  },
+  "homepage": "https://github.com/songsnim/mind-meld",
+  "repository": "https://github.com/songsnim/mind-meld",
+  "license": "MIT",
+  "keywords": [
+    "comprehension",
+    "review",
+    "pr",
+    "learning",
+    "microworld",
+    "socratic"
+  ]
+}
