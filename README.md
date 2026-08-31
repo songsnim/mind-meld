@@ -1,4 +1,31 @@
-# mind-meld
+<p align="center">
+  <img src="assets/hero.png" width="220" alt="mind-meld, a way into the agent's head">
+</p>
+
+<h1 align="center">mind-meld</h1>
+
+<p align="center">
+  <em>The agent already understands it. Now you do.</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/songsnim/mind-meld?style=flat-square&color=111111&label=stars" alt="Stars">
+  <img src="https://img.shields.io/badge/skills-8-111111?style=flat-square" alt="8 skills">
+  <img src="https://img.shields.io/badge/works%20with-5%20agents-111111?style=flat-square" alt="Works with 5 agents">
+  <img src="https://img.shields.io/badge/dependencies-0-111111?style=flat-square" alt="Zero dependencies">
+  <img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license">
+</p>
+
+<p align="center">
+  <strong>Understand the PR before you approve it &middot; measured, not assumed</strong><br>
+  <sub>Eight skills that build an interactive world out of the change, quiz you on it, drill the part you missed, and grade your own explanation until it holds at 8/10 on <em>what changed</em>, <em>why this way</em>, and <em>what can break</em>. Markdown only — no scripts, no dependencies, no build.</sub>
+</p>
+
+<p align="center">
+  <sub><a href="docs/i18n/README.ko.md">한국어</a> &middot; <a href="docs/i18n/README.zh.md">中文</a> &middot; <a href="docs/i18n/README.ja.md">日本語</a> &middot; <a href="docs/i18n/README.es.md">Español</a> &middot; <a href="docs/i18n/README.pt.md">Português</a> &middot; <a href="docs/i18n/README.ru.md">Русский</a></sub>
+</p>
+
+---
 
 A tool suite for understanding the unfamiliar concepts, knowledge, and design decisions an agent
 pulls in while it writes code — before you trust them. Its most frequent venue is the pull request an
@@ -106,9 +133,5 @@ explanation never gets ambushed by a Socratic dialogue.
 - The session speaks your language; grading an essay in a second language measures writing, not
   understanding.
 - No scripts, no dependencies, no build. Eight `SKILL.md` files.
-
-Translations: [한국어](docs/i18n/README.ko.md) · [中文](docs/i18n/README.zh.md) ·
-[日本語](docs/i18n/README.ja.md) · [Español](docs/i18n/README.es.md) ·
-[Português](docs/i18n/README.pt.md) · [Русский](docs/i18n/README.ru.md)
 
 MIT.

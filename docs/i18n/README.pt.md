@@ -1,4 +1,18 @@
-# mind-meld
+<p align="center">
+  <img src="../../assets/hero.png" width="220" alt="mind-meld">
+</p>
+
+<h1 align="center">mind-meld</h1>
+
+<p align="center">
+  <em>O agente já entendeu. Agora é a sua vez.</em>
+</p>
+
+<p align="center">
+  <sub><a href="../../README.md">English</a> &middot; <a href="README.ko.md">한국어</a> &middot; <a href="README.zh.md">中文</a> &middot; <a href="README.ja.md">日本語</a> &middot; <a href="README.es.md">Español</a> &middot; <a href="README.ru.md">Русский</a></sub>
+</p>
+
+---
 
 Um conjunto de ferramentas para entender os conceitos, conhecimentos e decisões de projeto pouco
 familiares que um agente traz enquanto escreve código — antes de confiar neles. Seu palco mais

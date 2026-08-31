@@ -1,4 +1,18 @@
-# mind-meld
+<p align="center">
+  <img src="../../assets/hero.png" width="220" alt="mind-meld">
+</p>
+
+<h1 align="center">mind-meld</h1>
+
+<p align="center">
+  <em>에이전트는 이미 이해했다. 이제 네가 이해할 차례다.</em>
+</p>
+
+<p align="center">
+  <sub><a href="../../README.md">English</a> &middot; <a href="README.zh.md">中文</a> &middot; <a href="README.ja.md">日本語</a> &middot; <a href="README.es.md">Español</a> &middot; <a href="README.pt.md">Português</a> &middot; <a href="README.ru.md">Русский</a></sub>
+</p>
+
+---
 
 에이전트가 코드를 쓰면서 끌어다 쓴 낯선 개념, 지식, 설계 결정을 — 그것을 신뢰하기 전에 — 이해하기 위한
 도구 모음입니다. 가장 자주 쓰이는 자리는 에이전트가 방금 올린 풀 리퀘스트이지만, 대상은 임의의 모듈,

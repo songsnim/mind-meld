@@ -1,4 +1,18 @@
-# mind-meld
+<p align="center">
+  <img src="../../assets/hero.png" width="220" alt="mind-meld">
+</p>
+
+<h1 align="center">mind-meld</h1>
+
+<p align="center">
+  <em>Агент уже понял. Теперь ваша очередь.</em>
+</p>
+
+<p align="center">
+  <sub><a href="../../README.md">English</a> &middot; <a href="README.ko.md">한국어</a> &middot; <a href="README.zh.md">中文</a> &middot; <a href="README.ja.md">日本語</a> &middot; <a href="README.es.md">Español</a> &middot; <a href="README.pt.md">Português</a></sub>
+</p>
+
+---
 
 Набор инструментов, чтобы понять незнакомые понятия, знания и проектные решения, которые агент
 притащил, пока писал код, — прежде чем им доверять. Чаще всего это происходит при разборе pull

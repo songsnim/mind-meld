@@ -1,4 +1,18 @@
-# mind-meld
+<p align="center">
+  <img src="../../assets/hero.png" width="220" alt="mind-meld">
+</p>
+
+<h1 align="center">mind-meld</h1>
+
+<p align="center">
+  <em>エージェントはもう理解している。次はあなたの番だ。</em>
+</p>
+
+<p align="center">
+  <sub><a href="../../README.md">English</a> &middot; <a href="README.ko.md">한국어</a> &middot; <a href="README.zh.md">中文</a> &middot; <a href="README.es.md">Español</a> &middot; <a href="README.pt.md">Português</a> &middot; <a href="README.ru.md">Русский</a></sub>
+</p>
+
+---
 
 エージェントがコードを書く過程で持ち込んだ、馴染みのない概念・知識・設計判断を、信頼する前に理解する
 ためのツール群です。最も出番が多いのはエージェントが開いたプルリクエストですが、対象は任意のモジュール、

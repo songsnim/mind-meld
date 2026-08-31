@@ -1,4 +1,18 @@
-# mind-meld
+<p align="center">
+  <img src="../../assets/hero.png" width="220" alt="mind-meld">
+</p>
+
+<h1 align="center">mind-meld</h1>
+
+<p align="center">
+  <em>智能体已经懂了。现在轮到你。</em>
+</p>
+
+<p align="center">
+  <sub><a href="../../README.md">English</a> &middot; <a href="README.ko.md">한국어</a> &middot; <a href="README.ja.md">日本語</a> &middot; <a href="README.es.md">Español</a> &middot; <a href="README.pt.md">Português</a> &middot; <a href="README.ru.md">Русский</a></sub>
+</p>
+
+---
 
 一套用来在信任之前，先真正理解智能体写代码时引入的陌生概念、知识与设计决策的工具集。它最常派上用场的场景
 是智能体刚提交的 Pull Request，但目标也可以是任意模块、算法、库、架构决策，或某个概念本身。
