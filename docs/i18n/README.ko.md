@@ -5,11 +5,11 @@
 <h1 align="center">mind-meld</h1>
 
 <p align="center">
-  <strong><em>에이전트의 마음을 당신의 마음으로. 신뢰하기 전에 이해하십시오.</em></strong>
+  <strong><em>The agent's mind to your mind. Understand it before you trust it.</em></strong>
 </p>
 
 <p align="center">
-  <sub>에이전트가 코드를 쓰면서 끌어다 쓴 낯선 개념, 지식, 설계 결정을 그것을 신뢰하기 전에 이해하기 위한 도구 모음입니다. 가장 자주 쓰이는 자리는 에이전트가 방금 올린 풀 리퀘스트이지만, 대상은 임의의 모듈, 알고리즘, 라이브러리, 아키텍처 결정, 개념 그 자체일 수도 있습니다.</sub>
+  <sub>에이전트가 코드를 쓰면서 끌어다 쓴 낯선 개념, 지식, 설계 결정을 이해하기 위한 도구 모음입니다. 에이전트가 올린 PR에 주로 사용되지만, 임의의 모듈, 알고리즘, 라이브러리, 아키텍처 결정, 혹은 일반적인 개념을 이해하기 위해 사용할 수도 있습니다.</sub>
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 
 ---
 
-에이전트는 사람이 읽는 속도보다 빠르게 코드를 냅니다. 리뷰의 병목은 승인 버튼을 누르는 일이 아니라, 무엇을 승인하는지 이해하는 일입니다. mind-meld 라는 이름은 [벌컨의 정신 융합](https://en.wikipedia.org/wiki/Vulcan_(Star_Trek)#Mind_meld)에서 왔습니다. 에이전트의 머릿속으로 들어가는 길입니다.
+에이전트는 사람이 읽는 속도보다 빠르게 코드를 씁니다. Agent coding 병목은 결과물을 이해하는 일입니다. mind-meld 라는 이름은 [벌컨의 mind meld](https://en.wikipedia.org/wiki/Vulcan_(Star_Trek)#Mind_meld)에서 왔습니다. 에이전트의 머릿속으로 들어가는 길입니다.
 
 ## 두 가지 사용 트랙
 
