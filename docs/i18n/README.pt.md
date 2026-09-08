@@ -1,19 +1,51 @@
-# mind-meld
+<p align="center">
+  <img src="../../assets/hero.png" width="220" alt="mind-meld">
+</p>
 
-Um conjunto de ferramentas para entender os conceitos, conhecimentos e decisões de projeto pouco
-familiares que um agente traz enquanto escreve código — antes de confiar neles. Seu palco mais
-frequente é o pull request que o agente acabou de abrir, mas o alvo pode ser qualquer módulo,
-algoritmo, biblioteca, decisão arquitetural ou conceito em si.
+<h1 align="center">mind-meld</h1>
 
-Agentes produzem mais rápido do que um humano lê. O gargalo da revisão não é clicar em aprovar, é
-entender o que você está aprovando. O nome vem da [fusão mental
-vulcana](https://en.wikipedia.org/wiki/Vulcan_(Star_Trek)#Mind_meld): um caminho para dentro da
-cabeça do agente.
+<p align="center">
+  <strong><em>A mente do agente para a sua mente. Entenda antes de confiar.</em></strong>
+</p>
 
-## Como uma sessão corre
+<p align="center">
+  <sub>Um conjunto de ferramentas para entender os conceitos, conhecimentos e decisões de projeto pouco familiares que um agente traz enquanto escreve código, antes de confiar neles. Seu palco mais frequente é o pull request que o agente acabou de abrir, mas o alvo pode ser qualquer módulo, algoritmo, biblioteca, decisão arquitetural ou conceito em si.</sub>
+</p>
+
+<p align="center">
+  <sub><a href="../../README.md">English</a> &middot; <a href="README.ko.md">한국어</a> &middot; <a href="README.zh.md">中文</a> &middot; <a href="README.ja.md">日本語</a> &middot; <a href="README.es.md">Español</a> &middot; <a href="README.ru.md">Русский</a></sub>
+</p>
+
+---
+
+Agentes produzem mais rápido do que um humano lê. O gargalo da revisão não é clicar em aprovar, é entender o que você está aprovando. O nome vem da [fusão mental vulcana](https://en.wikipedia.org/wiki/Vulcan_(Star_Trek)#Mind_meld): um caminho para dentro da cabeça do agente.
+
+## Duas formas de usar
+
+**Trilha 1: há um PR para revisar.** Chame o orquestrador e ele roda todo o fluxo.
 
 ```
-/mind-meld 42
+/mind-meld #42
+```
+
+**Trilha 2: qualquer outra coisa que você não entendeu.** Chame uma ferramenta direto com o que for:
+um conceito, um módulo, um algoritmo, um paper, uma frase que você acabou de ler.
+
+```
+/microworld "consistent hashing"
+/socratic src/scheduler.ts
+/five-whys "por que este repo fixa todas as versões"
+/first-principles "vector clocks"
+```
+
+A trilha 1 é um processo medido, com nota de corte. A trilha 2 é uma ferramenta só, quando você
+quiser e pelo tempo que quiser. Só o orquestrador escolhe ferramentas por você; na trilha 2 você
+escolhe.
+
+## Trilha 1: revisar um PR
+
+```
+/mind-meld #42
 ```
 
 1. **microworld** — um mundo HTML interativo que encarna o mecanismo, não um resumo da mudança. Você
@@ -31,13 +63,24 @@ cabeça do agente.
 A saída é `.mind-meld/<alvo>-report.md`: as notas, o que ficou obscuro e as perguntas para devolver
 ao agente. Nada é publicado por você. A aprovação é sua; mind-meld não aprova.
 
-Cada ferramenta também roda sozinha.
+Um branch, um intervalo de commits, um caminho, ou nenhum argumento (o diff de trabalho) funcionam
+igual a um número de PR.
 
-```
-/microworld src/scheduler.ts
-/five-whys 42
-/first-principles "vector clocks"
-```
+## Trilha 2: qualquer ferramenta, sobre qualquer coisa
+
+Sem nota e sem ordem obrigatória. Escolha pelo que travou:
+
+| Travou em | Chamada |
+| --- | --- |
+| Não consigo imaginar como aquilo se comporta | `/microworld <coisa>` |
+| Quero saber o que me passou | `/quiz <coisa>` |
+| Não sei dizer o que quebraria | `/socratic <coisa>` |
+| Acho que entendi, mas não sei explicar simples | `/feynman <coisa>` |
+| Não vejo por que foi feito assim | `/five-whys <coisa>` |
+| O próprio vocabulário é novo | `/first-principles <coisa>` |
+| Quero minha compreensão pontuada | `/short-essay <coisa>` |
+
+O argumento é texto livre. `/microworld "CRDT merge"` e `/microworld src/merge.ts` são ambos válidos.
 
 ## Instalação
 
@@ -66,40 +109,15 @@ mkdir -p ~/.config/opencode/skills
 ln -sfn ~/.mind-meld/skills/* ~/.config/opencode/skills/
 ```
 
-**Cursor**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.cursor/skills
-ln -sfn ~/.mind-meld/skills/* ~/.cursor/skills/
-```
-
-**Hermes**
-
-```sh
-git clone https://github.com/songsnim/mind-meld ~/.mind-meld
-mkdir -p ~/.hermes/skills
-ln -sfn ~/.mind-meld/skills/* ~/.hermes/skills/
-```
-
 Atualize com `git -C ~/.mind-meld pull` — os symlinks acompanham. O Claude Code atualiza pelo
 marketplace.
 
 ## O que tem dentro
 
-| Skill | O que faz |
-| --- | --- |
-| `mind-meld` | O orquestrador. Roteia para os demais. |
-| `microworld` | Mundo HTML interativo que encarna o mecanismo. |
-| `quiz` | Poucas perguntas determinadas; localiza a lacuna. |
-| `socratic` | Uma pergunta por vez, até você ver o que quebra. |
-| `feynman` | Explique em linguagem simples; os pontos vagos são marcados. |
-| `five-whys` | Desce até a restrição que forçou a decisão. |
-| `first-principles` | Reconstrói uma ideia estranha a partir das primitivas. |
-| `short-essay` | O instrumento de medida. Avaliado e revisado até sustentar. |
-
-Só `mind-meld` dispara sozinho. As outras sete são de chamada explícita, então pedir uma explicação
-nunca vira um diálogo socrático de surpresa.
+Oito skills: `mind-meld` mais as sete ferramentas que ele roteia — `microworld`, `quiz`, `socratic`,
+`feynman`, `five-whys`, `first-principles`, `short-essay`. Só `mind-meld` dispara sozinho; as outras
+sete são de chamada explícita, então pedir uma explicação nunca vira um diálogo socrático de
+surpresa.
 
 ## Notas
 
@@ -108,4 +126,4 @@ nunca vira um diálogo socrático de surpresa.
 - A sessão fala a sua língua. Avaliar um texto em segunda língua mede redação, não compreensão.
 - Sem scripts, sem dependências, sem build. Oito arquivos `SKILL.md`.
 
-MIT.
+[MIT](../../LICENSE).
