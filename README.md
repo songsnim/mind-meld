@@ -5,7 +5,7 @@
 <h1 align="center">mind-meld</h1>
 
 <p align="center">
-  <strong><em>The agent's mind to your mind. Understand the PR before you approve it.</em></strong>
+  <strong><em>The agent's mind to your mind. Understand it before you trust it.</em></strong>
 </p>
 
 <p align="center">
