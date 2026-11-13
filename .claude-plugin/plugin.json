@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "mind-meld",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A tool suite for actually understanding unfamiliar knowledge — a concept, a field's expertise, an algorithm, a library, a system, a design decision, or a code change.",
   "author": {
     "name": "youngjaesong",
