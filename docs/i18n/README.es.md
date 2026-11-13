@@ -5,11 +5,11 @@
 <h1 align="center">mind-meld</h1>
 
 <p align="center">
-  <strong><em>La mente del agente a tu mente. Entiéndelo antes de confiar en ello.</em></strong>
+  <strong><em>Otra mente a tu mente. Entiéndelo antes de confiar en ello.</em></strong>
 </p>
 
 <p align="center">
-  <sub>Un conjunto de herramientas para entender los conceptos, el conocimiento y las decisiones de diseño poco familiares que un agente incorpora mientras escribe código, antes de confiar en ellos. Su lugar más frecuente es el pull request que el agente acaba de abrir, pero el objetivo puede ser cualquier módulo, algoritmo, biblioteca, decisión arquitectónica o concepto por sí mismo.</sub>
+  <sub>Un conjunto de herramientas para entender de verdad un conocimiento desconocido —un concepto, la pericia de un campo, un algoritmo, una biblioteca, un sistema, una decisión de diseño o un cambio de código— en lugar de conformarte con la impresión que deja un resumen.</sub>
 </p>
 
 <p align="center">
@@ -18,18 +18,21 @@
 
 ---
 
-Los agentes producen más rápido de lo que un humano lee. El cuello de botella de la revisión no es pulsar aprobar, es entender qué se está aprobando. El nombre viene de la [fusión mental vulcana](https://en.wikipedia.org/wiki/Vulcan_(Star_Trek)#Mind_meld): una vía hacia la cabeza del agente.
+Leer una explicación produce la impresión de entender, no la comprensión. mind-meld cierra esa brecha midiéndola: construye un mundo que puedes explorar, te pone un cuestionario, ataca el punto débil y califica tu propia explicación hasta que se sostiene. El nombre viene de la [fusión mental vulcana](https://en.wikipedia.org/wiki/Vulcan_(Star_Trek)#Mind_meld): una vía hacia otra mente —la de un experto, la de un autor, la de un agente.
 
 ## Dos formas de usarlo
 
-**Vía 1: hay un PR que revisar.** Llama al orquestador y él ejecuta todo el flujo.
+**Vía 1 — una sesión completa.** Llama al orquestador con lo que quieras entender; ejecuta todo el
+flujo.
 
 ```
+/mind-meld "consistent hashing"
+/mind-meld src/scheduler.ts
 /mind-meld #42
 ```
 
-**Vía 2: cualquier otra cosa que no entiendas.** Llama a una herramienta directamente con lo que sea:
-un concepto, un módulo, un algoritmo, un paper, una frase que acabas de leer.
+**Vía 2 — una herramienta, cuando la necesites.** Llama a una herramienta directamente con lo que sea:
+un concepto, un módulo, un algoritmo, un artículo, una frase que leíste.
 
 ```
 /microworld "consistent hashing"
@@ -38,33 +41,33 @@ un concepto, un módulo, un algoritmo, un paper, una frase que acabas de leer.
 /first-principles "vector clocks"
 ```
 
-La vía 1 es un proceso medido con nota de corte. La vía 2 es una sola herramienta, cuando quieras y
-durante el tiempo que quieras. Solo el orquestador elige herramientas por ti; en la vía 2 eliges tú.
+La vía 1 es un pipeline medido con nota de aprobado. La vía 2 es una herramienta, todo el tiempo que
+quieras. Solo el orquestador elige herramientas por ti; en la vía 2 eliges tú.
 
-## Vía 1: revisar un PR
+## Vía 1: la sesión completa
 
 ```
-/mind-meld #42
+/mind-meld "consistent hashing"
 ```
 
-1. **microworld** — un mundo HTML interactivo que encarna el mecanismo, no un resumen del cambio. Tú
-   lo exploras; la sesión espera.
-2. **quiz** — unas pocas preguntas de respuesta determinada, para localizar lo que se te escapó. No
-   aprueba ni suspende.
-3. **Una herramienta profunda** — `feynman`, `five-whys`, `socratic` o `first-principles`, según el
-   eje que falló.
-4. **short-essay** — explícalo a un colega, de memoria. Se califica en tres ejes: **qué** cambió,
-   **por qué** así, **qué puede romperse**.
-5. **Se aprueba con 8/10 en todos los ejes**; si no, se revisa. Dos revisiones fallidas cambian la
-   herramienta profunda; cuatro fallos terminan la sesión y lo dicen: eso es evidencia de que el
-   cambio es confuso, no de que tú seas lento.
+1. **Microworld** — un mundo HTML interactivo que encarna el mecanismo, no un resumen. Tú lo exploras.
+   La sesión espera.
+2. **Quiz** — unas pocas preguntas con respuesta determinada, para ubicar lo que se te escapó. No te
+   aprueba ni te suspende.
+3. **Una herramienta profunda** — `feynman`, `five-whys`, `socratic` o `first-principles`, según lo que
+   se te escapó.
+4. **Ensayo corto** — explícaselo a un colega, de memoria. Un concepto recibe una sola nota; un cambio de
+   código se califica en tres ejes: **Qué** cambió, **Por qué** así, **Qué puede romperse**.
+5. **Aprobado con 8/10 en cada eje**, o a revisar. Dos revisiones fallidas cambian la herramienta
+   profunda; cuatro fallos terminan la sesión y lo dicen: es evidencia de que el objetivo no está claro,
+   no tú.
 
-El resultado es `.mind-meld/<objetivo>-report.md`: las puntuaciones, lo que quedó sin aclarar y las
-preguntas para devolver al agente. Nada se publica por ti. La aprobación es tuya; mind-meld no
-aprueba.
+Para un cambio de código sale `.mind-meld/<objetivo>-report.md`: las notas, lo que siguió sin
+quedar claro y las preguntas para devolver a quien lo produjo. Para un concepto el informe es opcional.
+No se envía nada por ti, y lo que decidas con esa comprensión es cosa tuya.
 
-Una rama, un rango de commits, una ruta o ningún argumento (el diff de trabajo) funcionan igual que
-un número de PR.
+El objetivo puede ser un concepto, una ruta, un número de PR, una rama o un rango de commits. Sin
+argumento, toma el tema de la conversación.
 
 ## Vía 2: cualquier herramienta, sobre cualquier cosa
 
@@ -123,7 +126,7 @@ un diálogo socrático por sorpresa.
 ## Notas
 
 - Sin estado. No recuerda puntuaciones entre sesiones.
-- La salida va a `.mind-meld/`, añadido a `.git/info/exclude`: el diff en revisión queda limpio.
+- La salida va a `.mind-meld/`, añadido a `.git/info/exclude`: tu árbol de trabajo queda limpio.
 - La sesión habla tu idioma. Calificar un ensayo en un segundo idioma mide redacción, no comprensión.
 - Sin scripts, sin dependencias, sin build. Ocho archivos `SKILL.md`.
 

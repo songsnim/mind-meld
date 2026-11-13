@@ -1,7 +1,7 @@
 ---
 name: quiz
-description: Ask a small set of questions about a target — a diff, a module, a concept — to locate precisely which part a human does not understand yet. Grades answers to find the weak spot, not to pass or fail anyone. Use when someone wants to check what they missed in a change or a concept, or asks to be quizzed on it.
-argument-hint: "[pr number | branch | commit range | path | concept]"
+description: Ask a small set of questions about a target — a concept, a field, a system, a code change — to locate precisely which part a human does not understand yet. Grades answers to find the weak spot, not to pass or fail anyone. Use when someone wants to check what they missed in an idea or a change, or asks to be quizzed on it.
+argument-hint: "[concept | path | pr number | branch | commit range]"
 disable-model-invocation: true
 ---
 
@@ -11,17 +11,17 @@ Resolve the target the way `../mind-meld/SKILL.md` does.
 
 ## How many
 
-As few as will locate the gap. In change mode, between 1 and the number of commits in the target. In
-concept mode, at most 5. A single decisive question beats five that circle the same point.
+As few as will locate the gap. In concept mode, at most 5. In change mode, between 1 and the number of
+commits in the target. A single decisive question beats five that circle the same point.
 
 ## Shape
 
 - Present every question at once, then collect all answers in one pass.
-- Tag each question with the axis it probes — What / Why / Risk in change mode.
+- Tag each question with the axis or aspect it probes — What / Why / Risk in change mode.
 - Each question must have a determinate answer that the target itself settles. Nothing that turns on
   taste.
-- Ask about behavior and consequence, not about trivia: not what a function is named, but what
-  happens when it gets an empty list.
+- Ask about behavior and consequence, not about trivia: not what something is called, but what
+  happens at its boundary or when an assumption fails.
 
 ## Grading
 

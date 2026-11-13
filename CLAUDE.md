@@ -2,17 +2,16 @@
 
 ## What this repo is
 
-`mind-meld` is a tool suite of Agent Skills that makes a human actually understand the unfamiliar
-concepts, knowledge, and design decisions an agent pulled in while writing code — before they trust
-it. The most frequent venue is reviewing a PR an agent just opened; the target is not limited to PRs
-(modules, algorithms, libraries, architectural decisions, bare concepts all qualify).
+`mind-meld` is a tool suite of Agent Skills that makes a human actually understand unfamiliar
+knowledge — a concept, a field's expertise, an algorithm, a library, a system, a design decision, or
+a code change. No venue is assumed: a pull request is one valid target among many, not the default.
 
-The problem it attacks: agents ship faster than humans read, so the review bottleneck is
-comprehension, not approval. Summaries do not fix it — reading a summary produces the impression of
-understanding. So the loop is the product: build a world, quiz, drill, then **measure** the human's
-own explanation and repeat while it sits below the floor.
+The problem it attacks: reading an explanation produces the impression of understanding, not the
+understanding. Summaries do not fix it. So the loop is the product: build a world, quiz, drill, then
+**measure** the human's own explanation and repeat while it sits below the floor.
 
-Named after Star Trek's Vulcan mind meld — a way into the agent's head.
+Named after Star Trek's Vulcan mind meld — a way into another mind (an expert's, an author's, an
+agent's).
 
 ## Layout
 
@@ -43,17 +42,19 @@ skills reference it (`../mind-meld/SKILL.md`) instead of restating those rules.
 - **One essay prompt** ("explain this to a colleague, from memory"), never split per axis: a form
   gets filled in, an explanation gets constructed, and the axis the human omits is itself the
   finding.
-- **Floor is 8/10 on every axis.** Change mode axes are What / Why / Risk; concept mode is a single
-  score, no forced template or required report — follow the knowledge.
+- **Floor is 8/10 on every axis.** Concept mode is the default: a single score, no forced template
+  or required report — follow the knowledge. Change mode (a diff) adds the axes What / Why / Risk.
 - **Loop caps**: 2 failed revisions switch the deep tool; 2 more failures end the session. Four
   explanations that did not land is evidence the target is unclear, so the output becomes questions
-  for the agent, not a fifth explanation.
+  for whoever produced the target, not a fifth explanation.
 - **Stateless.** No scores remembered between sessions — the dependency was not worth the memory.
-- **Output** goes to `.mind-meld/`, registered in `.git/info/exclude`, never the reviewed project's
-  `.gitignore`: the diff under review must stay clean. Reports are never posted as PR comments; the
-  human sends them, and the human approves — this suite reports comprehension and stops.
-- **Large targets**: read the core change, skip generated/lock/vendored/test churn, and list every
-  exclusion in the report. Telling a reviewer to split an already-opened PR is not actionable.
+- **Output** goes to `.mind-meld/`, registered in `.git/info/exclude`, never the project's
+  `.gitignore`: the working tree must stay clean. Reports are never posted or sent anywhere; the
+  human sends them, and whatever the human decides on top of the understanding is theirs — this
+  suite measures comprehension and stops.
+- **No argument** means whatever the conversation is about, else ask — not the working diff.
+- **Large targets**: read the core, skip generated/lock/vendored/test churn, and list every
+  exclusion in the report.
 - **Ambiguous targets** (`main`, `cache`) get one confirmation line, then proceed.
 - **Deliberately absent**: microworld fidelity verification (owner's call — the known risk is a human
   passing while confidently wrong; add `file:line` provenance or a verification pass if it
@@ -74,8 +75,9 @@ skills reference it (`../mind-meld/SKILL.md`) instead of restating those rules.
   same Agent Skills standard, so one copy of each SKILL.md serves all of them, and anything that
   breaks that (a runtime, a package manager) is off the table. Other hosts reading the same standard
   work by copying a block, but are not claimed until their path is confirmed.
-- Skill `description` fields carry both PR-shaped and concept-shaped triggers. PR-only wording would
-  hide the suite from half its uses.
+- Skill `description` fields lead with knowledge- and concept-shaped triggers; a code change appears
+  as one target among many, never as the framing. Review- or approval-only wording would hide the
+  suite from most of its uses.
 
 ## Relationship to other repos
 

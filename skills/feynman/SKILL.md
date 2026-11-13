@@ -1,7 +1,7 @@
 ---
 name: feynman
-description: Run the Feynman technique over a target — a diff, a module, a concept — having the human explain it in plain language, then hunting the exact points where the explanation goes vague and sending them back to the source. Best on gaps about what something actually does. Use when someone thinks they understand a change or an idea but cannot state it simply.
-argument-hint: "[pr number | branch | commit range | path | concept]"
+description: Run the Feynman technique over a target — a concept, a field, a system, a code change — having the human explain it in plain language, then hunting the exact points where the explanation goes vague and sending them back to the source. Best on gaps about what something actually does. Use when someone thinks they understand an idea or a change but cannot state it simply.
+argument-hint: "[concept | path | pr number | branch | commit range]"
 disable-model-invocation: true
 ---
 
@@ -11,8 +11,8 @@ Resolve the target the way `../mind-meld/SKILL.md` does.
 
 ## Procedure
 
-1. Ask the human to explain the target as if to someone who knows the language but not this codebase
-   or this field. No jargon. If a term is unavoidable, they define it in the same breath.
+1. Ask the human to explain the target as if to a smart colleague who has never met this field or
+   this system. No jargon. If a term is unavoidable, they define it in the same breath.
 2. Read their explanation and mark every place it goes vague: a term used as a placeholder for a
    mechanism, a step where "it handles" replaces what happens, a claim with no cause.
 3. Give the marked list back — the vague spots only, not the answers — and point them at the source

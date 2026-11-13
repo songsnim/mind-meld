@@ -1,7 +1,7 @@
 ---
 name: first-principles
-description: Rebuild an unfamiliar idea from its primitives — over a concept, an algorithm, a library, or the idea underneath a diff — until the human can derive the target instead of memorizing it. Best when the vocabulary itself is new. Use when someone is blocked not on a change but on the concept the change assumes.
-argument-hint: "[concept | pr number | branch | commit range | path]"
+description: Rebuild an unfamiliar idea from its primitives — over a concept, a theory, an algorithm, a library, or the idea underneath a change — until the human can derive the target instead of memorizing it. Best when the vocabulary itself is new. Use when the vocabulary or the underlying idea itself is new to someone.
+argument-hint: "[concept | path | pr number | branch | commit range]"
 disable-model-invocation: true
 ---
 
