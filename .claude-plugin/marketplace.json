@@ -9,7 +9,7 @@
     {
       "name": "mind-meld",
       "source": "./",
-      "description": "Understand what an agent actually did — and the unfamiliar ideas it used — before you approve it."
+      "description": "Actually understand unfamiliar knowledge — a concept, a field, a system, or a code change — before you trust it."
     }
   ]
 }

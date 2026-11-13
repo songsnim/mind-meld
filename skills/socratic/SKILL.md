@@ -1,7 +1,7 @@
 ---
 name: socratic
-description: Run a Socratic dialogue over a target — a diff, a module, a design decision, a concept — asking one question at a time until the human's own answers expose what breaks and why. Best on risk and consequence gaps. Use when someone cannot say what would go wrong, or asks to be questioned rather than told.
-argument-hint: "[pr number | branch | commit range | path | concept]"
+description: Run a Socratic dialogue over a target — a concept, a theory, a design decision, a system, a code change — asking one question at a time until the human's own answers expose what breaks and why. Best on risk and consequence gaps. Use when someone cannot say what would go wrong, or asks to be questioned rather than told.
+argument-hint: "[concept | path | pr number | branch | commit range]"
 disable-model-invocation: true
 ---
 
@@ -15,11 +15,11 @@ not know the answer asks aimless questions.
 One question per turn. Wait for the answer. The next question comes out of what they actually said,
 never from a prepared list.
 
-- Start from what the human already believes, and probe its edge: the empty input, the concurrent
-  call, the second caller, the failure path.
+- Start from what the human already believes, and probe its edge: the boundary case, the exception,
+  two conditions colliding, the point where it stops holding.
 - When an answer is wrong, do not correct it. Ask the question whose answer contradicts it, and let
   them see the collision.
-- When an answer is right but shallow, ask what it implies elsewhere in the system.
+- When an answer is right but shallow, ask what it implies elsewhere.
 - Never ask two things at once, and never ask a question that contains its own answer.
 
 ## Exit

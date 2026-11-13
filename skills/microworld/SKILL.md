@@ -1,7 +1,7 @@
 ---
 name: microworld
-description: Build a single self-contained interactive HTML microworld that faithfully embodies the mechanism of a target — a diff, a module, an algorithm, a system, or a concept — so a human can explore it and come away understanding how it actually behaves. Use when someone needs to see a mechanism run rather than read about it, or asks for an interactive explanation, simulator, or playground for a change or an idea.
-argument-hint: "[pr number | branch | commit range | path | concept]"
+description: Build a single self-contained interactive HTML microworld that faithfully embodies the mechanism of a target — a concept, a body of knowledge, an algorithm, a system, a module, or a code change — so a human can explore it and come away understanding how it actually behaves. Use when someone needs to see a mechanism run rather than read about it, or asks for an interactive explanation, simulator, or playground for an idea, a system, or a change.
+argument-hint: "[concept | path | pr number | branch | commit range]"
 disable-model-invocation: true
 ---
 
@@ -39,5 +39,5 @@ understand the whole idea, behavior, and mechanism of that artifact.
 One self-contained HTML file. On Claude Code publish it as an Artifact; elsewhere write it to
 `.mind-meld/<slug>.html` and print the path.
 
-Do not put quiz answers, a verdict, or a prose summary of the change in the page. The page is the
+Do not put quiz answers, a verdict, or a prose summary of the target in the page. The page is the
 world; the understanding is the human's to build.
